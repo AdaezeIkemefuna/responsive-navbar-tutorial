@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    padding: 0; margin: 0;
+    
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    background: rgb(68, 45, 40);
+    color: #fff;
+    display: flex;
+    justify-content: space-between; 
+}
+
+nav .main_menu{
+    display: flex;
+    list-style: none;
+}
+
+nav .main_menu li a{
+    display: inline-block;
+    padding: .7rem;
+    margin: 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    
+}
+
+nav .main_menu li a:hover{
+    background: rgba(255, 255, 255, .65);
+    border-radius: 10px;
+    color: #000;
+}
+
+nav .open_menu{
+    font-size: 1.5rem;
+    margin: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .main_menu .close_menu, .icons i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.fa-facebook:hover{ color: rgb(35, 73, 241);}
+.fa-twitter:hover{ color: rgb(105, 125, 189);}
+.fa-instagram:hover{ color: rgb(241, 35, 196);}
+.fa-github:hover{ color: rgb(211, 39, 48);}
+
+nav .logo{
+    font-size: 1.5rem;
+    margin: .7rem;
+    cursor: pointer;
+}
+
+@media(max-width:800px){
+    nav .main_menu{
+        height: 100vh;
+        position: fixed; top: 0; right: 0; left: 0;
+        /* z-index: 10; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top .5s ease;
+        display: none;
+    }
+
+    nav .main_menu li a:hover{
+        background: none;
+        color: rgb(255, 123, 0);
+        font-size: 1.2rem;
+    }
+
+    nav .main_menu .close_menu{
+        display: block;
+        position:absolute; top: 20px; right: 20px;
+    }
+
+    nav .open_menu{
+        display: block;
+    }
+
+    .icons{
+        margin-top: 3rem;
+    }
+    .icons i{
+        display: inline-block;
+        padding: .7rem;
+    }
+}
